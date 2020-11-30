@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(14, 14, 66);
+    color: white;
+    box-sizing: border-box;
+}
+
+.logoContainer{
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    right: 30px;
+    color: white;
+}
+
+.searchContainer{
+    display: inline-flex;
+    align-items: center;
+}
+
+.searchbar{
+    font-size: x-large;
+}
+
+.loginContainer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loginregister{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login{
+    position: relative;
+    right: 40px;
+    font-size: 25px;
+}
+
+.register{
+    font-size: 25px;
+}
