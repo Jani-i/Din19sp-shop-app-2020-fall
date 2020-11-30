@@ -1,5 +1,6 @@
 import React, {useState, useEffect, Component} from 'react';
-import styles from './FeaturedItems.module.css'
+import styles from './FeaturedItems.module.css';
+import { Link } from 'react-router-dom';
 
 export default function FeaturedItems() {
 
@@ -30,7 +31,12 @@ export default function FeaturedItems() {
                         <div className={ styles.imgContainer} >
                             <img src={item.imgURL} alt="Error: no image found"></img>
                         </div>
-                        <div className={ styles.price }>Price: {item.price}€</div>
+                        <div className={ styles.bottomInfo }>                        
+                            <div>Price: { item.price }€</div>
+                            <Link className={ styles.link } to={`/products/${item.productURL}`}>
+                                Go to
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
