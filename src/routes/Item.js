@@ -1,5 +1,6 @@
 import React, {useState, useEffect, Component} from 'react';
-import styles from './Item.module.css'
+import styles from './Item.module.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Item(props) {
@@ -27,16 +28,27 @@ export default function Item(props) {
     };
     return (
         <div className={ styles.container }>
+            <div className={ styles.backgroundImage }>
+            </div>
             {itemInfo.map(item => (
             <>
             <div className={ styles.itemContainer } >
                 <div >
                     <div className={ styles.itemName } key={item.name}>{item.name}</div>
-                    <div >
+                    <div className={ styles.infoContainer }>
                         <div className={ styles.imgContainer} >
-                            <img src={item.imgURL} alt="Error: no image found"></img>
+                            <img className={ styles.img } src={item.imgURL} alt="Error: no image found"></img>
                         </div>
-                        <div className={ styles.price }>Price: {item.price}€</div>
+                        <div className={ styles.descriptionContainer }>
+                        <div className={ styles.description }>{item.description}</div>
+                        <div className={ styles.bottomInfo } >
+                            <div className={ styles.price }>Price: {item.price}€</div>
+                            <Link className={ styles.cartButton }>
+                            <div>Add to cart</div>
+                            </Link>
+                        </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
