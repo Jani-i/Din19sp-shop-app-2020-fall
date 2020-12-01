@@ -1,5 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
+import FeaturedItems from './FeaturedItems';
 import styles from './Header.module.css'
+import Searchview from './Searchview';
 
 export default class Searchbar extends Component {
 
