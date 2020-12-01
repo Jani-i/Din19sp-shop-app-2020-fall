@@ -4,17 +4,21 @@ import Header from './components/Header';
 import Home from './routes/Home';
 import Admin from './routes/Admin';
 import Item from './routes/Item';
+import Footer from './components/Footer';
 
-function App() {
+function App(props) {
+
+  console.log(props.products)
   return (
     <div>
       <Router>
-        <Header />
+        <Header /> 
         <Switch>
           <Route path="/" exact component={ Home } />
           <Route path="/admin" exact component={ Admin } />
           <Route path="/products/:productURL" component={ Item } />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
