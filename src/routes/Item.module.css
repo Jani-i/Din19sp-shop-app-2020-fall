@@ -1,5 +1,25 @@
+.backgroundImage{
+    margin-top: 20px;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c2ae60e8-8909-4614-be7f-79976055fcdc/daz0qnj-78994ae1-7fbe-47e1-8e40-bcb3daa07d4c.jpg/v1/fill/w_1600,h_553,q_75,strp/forest_scene___by_aledjonesdigitalart_daz0qnj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NTMiLCJwYXRoIjoiXC9mXC9jMmFlNjBlOC04OTA5LTQ2MTQtYmU3Zi03OTk3NjA1NWZjZGNcL2RhejBxbmotNzg5OTRhZTEtN2ZiZS00N2UxLThlNDAtYmNiM2RhYTA3ZDRjLmpwZyIsIndpZHRoIjoiPD0xNjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FBmBIf_DK8Vihy7VfsSmDreO-0v9WCVyotFcOfXc4H8");
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+    background-repeat: repeat;
+    background-size: cover;
+    transform: scale(1.1);
+}
+
 .container{
     display: flex;
+    padding-top: 50px;
     width: 100vw;
     justify-content: center;
 }
@@ -7,19 +27,80 @@
 .itemContainer{
     display: flex;
     width: 75vw;
-    background-color: beige;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    border: 1px solid black;
 }
 
 .itemName{
     width: 100%;
     font-size: 36px;
-    padding-top: 50px;
     padding-bottom: 20px;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.infoContainer{
+    display: flex;
+    width: 75vw;
 }
 
 .imgContainer{
+    width: 40%;
+    height: 500px;
+}
+
+.imgContainer img{
     width: 100%;
-    height: 300px;
+    height: 100%
+}
+
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 50px;
+    padding-right: 50px;
+
+}
+
+.description{
+    margin-bottom: auto;
+}
+
+.bottomInfo{
+    margin-top: auto;
+    margin-left:50%;
+    margin-right: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.price{
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.cartButton{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    justify-items: flex-end;
+    padding: 10px;
+    border: 2px solid black;
+    font-weight: 500;
+    transition: border-radius 0.5s, background-color 0.5s, color 0.5s;
+}
+
+.cartButton:hover{
+    border-radius: 10px;
+    background-color: rgba(42, 52, 199, 0.5);
+    color: white;
+}
+
+.cartButton:active{
+    background-color: rgba(26, 33, 129, 0.9);
 }
