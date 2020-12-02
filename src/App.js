@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 
 function App(props) {
 
-  console.log(props.products)
   return (
     <div>
       <Router>
