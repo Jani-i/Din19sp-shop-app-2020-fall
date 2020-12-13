@@ -1,9 +1,10 @@
 import React, {useState, useEffect, Component} from 'react';
+import FeaturedItems from '../components/FeaturedItems'
 import styles from './Item.module.css';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
-export default function Item(props) {
+function Item(props) {
 
     useEffect(() => {
         fetchItemInfo();
@@ -24,10 +25,12 @@ export default function Item(props) {
             })
         const itemInfo = await data.json();
         setItems(itemInfo.item);
-        
     };
+
     return (
         <div className={ styles.container }>
+            <div>
+
             <div className={ styles.backgroundImage }>
             </div>
             {itemInfo.map(item => (
@@ -55,5 +58,8 @@ export default function Item(props) {
             </>
         ))}
         </div>
+        </div>
     )
 }
+
+export default withRouter(Item);

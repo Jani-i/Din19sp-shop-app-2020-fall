@@ -19,6 +19,7 @@
 
 .container{
     display: flex;
+    flex-direction: column;
     padding-top: 50px;
     width: 100vw;
     justify-content: center;
@@ -26,6 +27,7 @@
 
 .itemContainer{
     display: flex;
+    margin-left: 12.5%;
     width: 75vw;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -103,4 +105,9 @@
 
 .cartButton:active{
     background-color: rgba(26, 33, 129, 0.9);
+}
+
+.featuredItems{
+    display: flex;
+    flex-direction: row;
 }

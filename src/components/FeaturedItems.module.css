@@ -96,6 +96,18 @@ img{
 }
 
 .link{
+    margin-right: 20px;
+}
+
+
+h1{
+    margin: 0;
+    padding-left: 12.5%;
+    padding-top:50px;
+    color: white;
+}
+
+.nolinkdeco{
     margin-right: 5%;
     padding-left: 20px;
     padding-right: 20px;
@@ -111,18 +123,11 @@ img{
     transition: background 0.5s, color 0.5s, border-radius 0.5s;
 }
 
-.link:hover{
+.nolinkdeco:hover{
     background-color: rgba(42, 52, 199, 0.5);
     color: white;
 }
 
-.link:active{
+.nolinkdeco:active{
     background-color: rgba(26, 33, 129, 0.9);
-}
-
-h1{
-    margin: 0;
-    padding-left: 12.5%;
-    padding-top:50px;
-    color: white;
 }

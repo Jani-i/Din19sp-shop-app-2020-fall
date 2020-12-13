@@ -36,9 +36,11 @@ export default function FeaturedItems() {
                                 </div>
                                 <div className={ styles.bottomInfo }>                        
                                     <div className={ styles.price }>Price: { item.price }€</div>
-                                    <Link className={ styles.link } to={`/products/${item.productURL}`}>
+                                    <div className={ styles.link } onClick={window.location = `localhost:3000/products/${item.productURL}`}>
+                                    <Link className={ styles.nolinkdeco } to={`/products/${item.productURL}`} >
                                         Buy
                                     </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

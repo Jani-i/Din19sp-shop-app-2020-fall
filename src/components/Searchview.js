@@ -49,9 +49,11 @@ export default function Searchview(props) {
                             </div>
                             <div className={ styles.bottomInfo }>                        
                                 <div className={ styles.price }>Price: { item.price }€</div>
-                                <Link className={ styles.link } to={`/products/${item.productURL}`}>
+                                <div onClick={window.location = `localhost:3000/products/${item.productURL}`}>
+                                <Link className={ styles.link } to={`/products/${item.productURL}`} >
                                     Buy
                                 </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
