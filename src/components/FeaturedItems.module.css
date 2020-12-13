@@ -18,9 +18,8 @@
 }
 
 .supercontainer{
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-    
 }
 
 .container{
@@ -100,7 +99,7 @@ img{
 }
 
 
-h1{
+.featuredTitle{
     margin: 0;
     padding-left: 12.5%;
     padding-top:50px;
@@ -124,6 +123,7 @@ h1{
 }
 
 .nolinkdeco:hover{
+    border-radius: 10px;
     background-color: rgba(42, 52, 199, 0.5);
     color: white;
 }

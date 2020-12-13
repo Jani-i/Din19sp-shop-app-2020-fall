@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './AlertComponent.module.css'
 
 
 function AlertComponent(props) {
@@ -10,8 +11,8 @@ function AlertComponent(props) {
             id="alertPopUp"
         >
             <div>
-                <span>{ props.errorMessage }</span>
-                <span>{ props.successMessage }</span>
+                <span className={ styles.error } >{ props.errorMessage }</span>
+                <span className={ styles.success } >{ props.successMessage }</span>
             </div>
             
         </div>

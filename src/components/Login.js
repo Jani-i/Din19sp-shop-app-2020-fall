@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './Header.module.css'
+import {Link} from 'react-router-dom'
 
 export default function Login() {
     return (
         <div className={ styles.loginregister }>
-            <div className={ styles.login }>Login</div>
-            <div className={ styles.register }>Register</div>
+            <Link className={ styles.login } to="/login">Login</Link>
+            <Link className={ styles.register } to="/register">Register</Link>
         </div>
     )
 }
