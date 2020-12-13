@@ -7,35 +7,35 @@ import { Link } from 'react-router-dom';
 export default function Searchview(props) {
 
     useEffect(() => {
-        fetchFeaturedItems();
+        fetchAllItems();
     }, []);
 
-    const [featuredItems, setItems] = useState([]);
+    const [allItems, setItems] = useState([]);
 
-    const fetchFeaturedItems = async () => {
+    const fetchAllItems = async () => {
         const data = await fetch(
-            'http://localhost:4000/fetchFeatured'
+            'http://localhost:4000/fetchItems'
         );
 
-        const featuredItems = await data.json();
-        setItems(featuredItems.items);
+        const allItems = await data.json();
+        setItems(allItems.items);
         
     };
 
     const [search, setSearch] = useState('')
 
-    const filteredItems = featuredItems.filter( item => {
+    const filteredItems = allItems.filter( item => {
         return(item.name.toLowerCase().includes(search.toLowerCase),
         item.imgURL.includes(search),
         item.price,
         item.productURL.includes(search)) 
     })
-    console.log(featuredItems)
+    console.log(allItems)
     console.log(filteredItems)
     return (
         <div>
             <div>
-                <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}></input>
+                <input type="text" className={styles.searchbar} placeholder="search" onChange={ e => setSearch(e.target.value)}></input>
             </div>
             <div>
                 {filteredItems.map(item => (
