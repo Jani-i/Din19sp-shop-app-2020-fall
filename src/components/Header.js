@@ -20,7 +20,7 @@ export default function Header(props) {
                 <div className={ styles.searchContainer }>
                 
                 </div>
-                
+
                 <div className={ styles.loginContainer }>
                     <Login/>
                 </div>

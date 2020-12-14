@@ -11,8 +11,7 @@ export default function LoginForm(props) {
     const [successMessage, updateSuccessMessage] = useState(null);
     const [state, setState] = useState({
         username : "",
-        password : "",
-        confirmPassword : ""
+        password : ""
     })
     const handleChange = (e) => {
         const {id, value} = e.target
@@ -37,6 +36,7 @@ export default function LoginForm(props) {
                         setIsUserLogged(true);
                         props.showError(null)
                         props.showSuccess("Account found and authorized.")
+                        window.location.pathname = '/'
 
                     })
                     .catch(error => console.log(error));
