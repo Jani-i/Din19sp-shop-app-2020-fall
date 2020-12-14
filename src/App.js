@@ -6,6 +6,9 @@ import Admin from './routes/Admin';
 import Item from './routes/Item';
 import Footer from './components/Footer';
 import Products from './routes/Products';
+import LoginPage from './routes/LoginPage';
+import RegisterPage from './routes/RegisterPage';
+import styles from './App.module.css'
 
 function App(props) {
 
@@ -19,6 +22,8 @@ function App(props) {
               <Route path="/admin" exact component={ Admin } />
               <Route path="/products/:productURL" exact component={ withRouter(Item) } />
               <Route path="/products" exact component={ withRouter(Products) } />
+              <Route path="/login" exact component={ LoginPage } />
+              <Route path="/register" exact component={ RegisterPage } />
             </Switch>
           <Footer />
         </Router>    

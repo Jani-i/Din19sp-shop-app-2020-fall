@@ -21,7 +21,7 @@ export default function FeaturedItems() {
     };
 
     return (
-            <div className={ styles.supercontainer }><h1>Featured Items</h1>
+            <div className={ styles.supercontainer }><h1 className={ styles.featuredTitle }>Featured Items</h1>
             <div className={ styles.backgroundImage }>
             </div>
                 <div className={ styles.container }>
