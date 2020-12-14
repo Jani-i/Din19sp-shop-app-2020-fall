@@ -4,7 +4,8 @@
     justify-content: space-around;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    display: 
+    display: ;
+    padding-left: 4%;
 }
 
 .searchbar{
@@ -13,4 +14,21 @@
     top: 7%;
     font-size: x-large;
     width: 20%;
+}
+
+.supercontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    
+    
+}
+
+.link{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    
 }

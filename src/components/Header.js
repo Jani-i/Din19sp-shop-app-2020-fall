@@ -12,7 +12,7 @@ export default function Header(props) {
         <div>
             <div className={ styles.container }>
                 <div className={ styles.logoContainer}>
-                    <Link to='/'>
+                    <Link to='/' style={{ textDecoration: 'none' }}>
                         <Logo/>
                     </Link>
                 </div>

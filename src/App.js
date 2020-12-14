@@ -5,6 +5,7 @@ import Home from './routes/Home';
 import Admin from './routes/Admin';
 import Item from './routes/Item';
 import Footer from './components/Footer';
+import Products from './routes/Products';
 
 function App(props) {
 
@@ -17,6 +18,7 @@ function App(props) {
               <Route path="/" exact component={ Home } />
               <Route path="/admin" exact component={ Admin } />
               <Route path="/products/:productURL" exact component={ withRouter(Item) } />
+              <Route path="/products" exact component={ withRouter(Products) } />
             </Switch>
           <Footer />
         </Router>    
