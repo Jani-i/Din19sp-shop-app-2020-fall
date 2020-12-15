@@ -14,12 +14,10 @@ export default function Animals(props) {
         const data = await fetch(
             'http://localhost:4000/fetchItems'
         )
-
         const filteredItems = await data.json();
         setItems(filteredItems.items);
-        console.log(filteredItems)
     };
-
+    console.log(filteredItems)
     return (
         <div>
             <div>

@@ -54,7 +54,6 @@ export default function Searchview(props) {
             <div className={styles.supercontainer}>
                 {filteredItems.map(item => (
                 <>
-                <Link to={'/products'} className={styles.link}>See all</Link>
                 <div className={ styles.container } >
                     <div >
                         <div className={ styles.itemName } key={item.name}>{item.name}</div>
