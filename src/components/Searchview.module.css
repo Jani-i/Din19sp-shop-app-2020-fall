@@ -5,14 +5,14 @@
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     display: ;
-    padding-left: 4%;
+    padding-left: 6%;
 }
 
 .searchbar{
-    position: absolute;
+    position: relative;
     left: 40%;
-    top: 7%;
-    font-size: x-large;
+    bottom: 65px;
+    font-size: 30px;
     width: 20%;
 }
 
@@ -21,8 +21,9 @@
     flex-wrap: wrap;
     justify-content: left;
     background-color: rgb(255, 255, 255);
-    position: absolute;
+    position: relative;
     width: 100%;
+    bottom: 40px;
     
     
 }

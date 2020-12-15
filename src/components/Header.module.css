@@ -4,33 +4,33 @@
     justify-content: space-around;
     background-color: rgb(14, 14, 66);
     color: white;
+    height: 100px;
 }
 
 .logoContainer{
     display: inline-flex;
     align-items: center;
+    height: 100px;
 }
 
 .logo{
     position: relative;
     right: 30px;
-    bottom: 25px;
+    font-size: 50px;
     color: white;
 }
 
 .searchContainer{
     display: inline-flex;
     align-items: center;
-}
-
-.searchbar{
-    font-size: x-large;
+    height: 100px;
 }
 
 .loginContainer{
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    height: 100px;
 }
 
 .loginregister{
