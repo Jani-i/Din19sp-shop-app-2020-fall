@@ -22,7 +22,6 @@ export default function Header(props) {
                 </div>
 
                 <div className={ styles.loginContainer }>
-                    <Login/>
                 </div>
             </div>
             <Searchview />

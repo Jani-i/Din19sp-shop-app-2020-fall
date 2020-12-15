@@ -63,16 +63,14 @@ export default function RegisterForm(props) {
         } else {
             props.showError('Please enter valid username and password')
             props.showSuccess(null);    
-            
         }
-
     }
 
 
     return (
         <div>
 
-                <h1>SIGN UP:</h1>
+                <h1>REGISTER A NEW ADMIN USER:</h1>
                 <div className={ styles.formItem }>
                     <label className={ styles.formLabel }>Username:</label><br></br>
                     <input type="text"
@@ -103,8 +101,6 @@ export default function RegisterForm(props) {
                 onClick={handleSubmitClick}>
                     Register
                 </button>
-                <p>Already have an account? <Link to="/signin">Sign In</Link></p>
-            
         </div>
     )
 }

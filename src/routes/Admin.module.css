@@ -1,0 +1,48 @@
+.backgroundImage{
+    margin-top: 20px;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c2ae60e8-8909-4614-be7f-79976055fcdc/daz0qnj-78994ae1-7fbe-47e1-8e40-bcb3daa07d4c.jpg/v1/fill/w_1600,h_553,q_75,strp/forest_scene___by_aledjonesdigitalart_daz0qnj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NTMiLCJwYXRoIjoiXC9mXC9jMmFlNjBlOC04OTA5LTQ2MTQtYmU3Zi03OTk3NjA1NWZjZGNcL2RhejBxbmotNzg5OTRhZTEtN2ZiZS00N2UxLThlNDAtYmNiM2RhYTA3ZDRjLmpwZyIsIndpZHRoIjoiPD0xNjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FBmBIf_DK8Vihy7VfsSmDreO-0v9WCVyotFcOfXc4H8");
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+    background-repeat: repeat;
+    background-size: cover;
+    transform: scale(1.1);
+}
+
+.container{
+    width:100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBorder{
+    border: 1px black solid;
+}
+
+.alert{
+    position: fixed;
+    top: 20vh;
+    right: 10vw;
+    border: 1px black solid;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: white;
+}
+
+.notification{
+    font-weight: 500;
+    text-decoration: underline;
+}

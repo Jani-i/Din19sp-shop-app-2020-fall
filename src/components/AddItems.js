@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios';
+import styles from './AddItems.module.css'
 
 export default function AddItems(props) {
 
@@ -76,51 +77,57 @@ export default function AddItems(props) {
         <div>
             
             <h1>ADD ITEMS</h1>
-                <div>
-                    <label>Product name:</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Product name:</label><br/>
                     <input type="text"
+                    className={ styles.inputBox }
                     id="name"
+                    pattern="[A-Za-z]"
                     placeholder="Product name"
                     onChange={handleChange}/>
                 </div>
-                <div>
-                    <label>Product URL</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Product URL</label><br/>
                     <input type="text"
+                    className={ styles.inputBox }
                     id="productURL"
                     onChange={handleChange}/>
                     <button type="button" onClick={generateURL}>Generate URL</button>
                 </div>
-                <div>
-                    <label>Price:</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Price:</label><br/>
                     <input type="number"
+                    className={ styles.inputBox }
                     id="price"
                     placeholder="Price"
                     onChange={handleChange}/>
                 </div>
-                <div>
-                    <label>Description:</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Description:</label><br/>
                     <textarea id="description"
                     placeholder="Type description here"
                     rows="8" cols="50" maxLength="2000"
                     onChange={handleChange}/>
                 </div>
-                <div>
-                    <label>Tags:</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Tags:</label><br/>
                     <textarea id="tags"
                     placeholder="Type tags here"
                     rows="1" cols="50" maxLength="240"
                     onChange={handleChange}/>
                 </div>
-                <div>
-                    <label>Image:</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Image:</label><br/>
                     <input type="text"
+                    className={ styles.inputBox }
                     id="imgURL"
                     placeholder="Image URL"
                     onChange={handleChange}/>
                 </div>
-                <div>
-                    <label>Times bought (ALWAYS SET TO 0):</label><br/>
+                <div className={ styles.formItem }>
+                    <label className={ styles.formLabel }>Times bought (ALWAYS SET TO 0):</label><br/>
                     <input type="number"
+                    className={ styles.inputBox }
                     id="timesbought"
                     placeholder="Times bought"
                     onChange={handleChange}/>

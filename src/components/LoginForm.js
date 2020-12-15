@@ -2,13 +2,10 @@ import React, {useState} from 'react'
 import styles from '../routes/LoginPage.module.css'
 import { Link, Redirect } from 'react-router-dom'
 import Axios from 'axios';
-import AlertComponent from '../components/AlertComponent';
 
 
 export default function LoginForm(props) {
     const [ isUserLogged, setIsUserLogged ] = useState(false);
-    const [errorMessage, updateErrorMessage] = useState(null);
-    const [successMessage, updateSuccessMessage] = useState(null);
     const [state, setState] = useState({
         username : "",
         password : ""
@@ -36,7 +33,8 @@ export default function LoginForm(props) {
                         setIsUserLogged(true);
                         props.showError(null)
                         props.showSuccess("Account found and authorized.")
-                        window.location.pathname = '/'
+                        props.shouldHide(false)
+                        
 
                     })
                     .catch(error => console.log(error));
@@ -64,7 +62,6 @@ export default function LoginForm(props) {
                     onChange={ handleChange }/>
                 </div>
                 <button type="submit" className={ styles.loginButton } onClick={ processLoginClick }>Log In</button>
-                <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </div>
     )
 }
