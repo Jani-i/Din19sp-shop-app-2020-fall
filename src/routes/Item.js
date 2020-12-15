@@ -17,7 +17,7 @@ function Item(props) {
             'http://localhost:4000/fetchItemInfo', {
                 method: 'POST',
                 body: JSON.stringify({
-                    productURL: props.match.params.productURL
+                    animalURL: props.match.params.animalURL
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8'
@@ -45,7 +45,7 @@ function Item(props) {
                         <div className={ styles.descriptionContainer }>
                         <div className={ styles.description }>{item.description}</div>
                         <div className={ styles.bottomInfo } >
-                            <div className={ styles.price }>Price: {item.price}€</div>
+                            <div className={ styles.danger }>DP: {item.danger}</div>
                             <Link className={ styles.cartButton }>
                             <div>Add to cart</div>
                             </Link>

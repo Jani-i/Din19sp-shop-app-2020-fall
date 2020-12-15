@@ -38,6 +38,7 @@ export default function Searchview(props) {
             item.imgURL.includes(search),
             item.danger,
             item.animal.includes(search))
+            item.animalURL.includes(search))
         }
          
     })
@@ -52,6 +53,7 @@ export default function Searchview(props) {
             </div>
             <div className={styles.supercontainer}>
             
+            <Link to={'/animals'} className={styles.link}>See all</Link>
                 {filteredItems.map(item => (
                 <>
                 <Link to={'/products'} className={styles.link}>See all</Link>
@@ -63,9 +65,9 @@ export default function Searchview(props) {
                                 <img src={item.imgURL} alt="Error: no image found"></img>
                             </div>
                             <div className={ styles.bottomInfo }>                        
-                                <div className={ styles.danger }>danger: { item.danger }€</div>
-                                <div onClick={window.location = `localhost:3000/products/${item.animal}`}>
-                                <Link className={ styles.link } to={`/products/${item.animal}`} >
+                                <div className={ styles.danger }>danger: { item.danger }</div>
+                                <div onClick={window.location = `localhost:3000/animals/${item.animalURL}`}>
+                                <Link className={ styles.link } to={`/animals/${item.animalURL}`} >
                                     Buy
                                 </Link>
                                 </div>

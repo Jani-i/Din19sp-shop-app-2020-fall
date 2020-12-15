@@ -49,7 +49,7 @@
     backface-visibility: hidden;
 }
 
-.itemContainer:hover .price{
+.itemContainer:hover .danger{
     font-weight: 500;
 }
 
@@ -87,7 +87,7 @@ img{
     flex-direction: row;
 }
 
-.price{
+.danger{
     width: 75%;
     padding-left: 20px;
     font-weight: 350;

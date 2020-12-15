@@ -35,9 +35,9 @@ export default function FeaturedItems() {
                                     <img src={item.imgURL} alt="Error: no image found"></img>
                                 </div>
                                 <div className={ styles.bottomInfo }>                        
-                                    <div className={ styles.price }>Price: { item.price }€</div>
-                                    <div className={ styles.link } onClick={window.location = `localhost:3000/products/${item.productURL}`}>
-                                    <Link className={ styles.nolinkdeco } to={`/products/${item.productURL}`} >
+                                    <div className={ styles.danger }>DP: { item.danger }</div>
+                                    <div className={ styles.link } onClick={window.location = `localhost:3000/animals/${item.animalURL}`}>
+                                    <Link className={ styles.nolinkdeco } to={`/animals/${item.animalURL}`} >
                                         Buy
                                     </Link>
                                     </div>

@@ -4,6 +4,7 @@ import AlertComponent from '../components/AlertComponent';
 import styles from './Admin.module.css';
 import LoginForm from '../components/LoginForm';
 import RegisterForm from '../components/RegisterForm';
+import ModifyItem from '../components/ModifyItem';
 
 export default function Admin() {
 
@@ -31,7 +32,9 @@ export default function Admin() {
                     null : 
                     <>
                     <AddItems showError={ updateErrorMessage } showSuccess={ updateSuccessMessage } />
+                    <ModifyItem showError={ updateErrorMessage } showSuccess={ updateSuccessMessage } />
                     <RegisterForm showError={ updateErrorMessage } showSuccess={ updateSuccessMessage } />
+                    
                     </>}
                 </div>
             </div>
