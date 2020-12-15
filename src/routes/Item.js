@@ -46,9 +46,6 @@ function Item(props) {
                         <div className={ styles.description }>{item.description}</div>
                         <div className={ styles.bottomInfo } >
                             <div className={ styles.danger }>DP: {item.danger}</div>
-                            <Link className={ styles.cartButton }>
-                            <div>Add to cart</div>
-                            </Link>
                         </div>
                         </div>
 

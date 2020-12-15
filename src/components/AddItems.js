@@ -45,7 +45,7 @@ export default function AddItems(props) {
                 "animalURL":state.animalURL,
                 "danger":state.danger,
                 "imgURL":state.imgURL,
-                "timesbought":state.timesbought,
+                "timesviewed":state.timesviewed,
                 "description":state.description,
                 "tags":state.tags,
             }
@@ -124,11 +124,11 @@ export default function AddItems(props) {
                     onChange={handleChange}/>
                 </div>
                 <div className={ styles.formItem }>
-                    <label className={ styles.formLabel }>Times bought (ALWAYS SET TO 0):</label><br/>
+                    <label className={ styles.formLabel }>Times viewed (ALWAYS SET TO 0):</label><br/>
                     <input type="number"
                     className={ styles.inputBox }
-                    id="timesbought"
-                    placeholder="Times bought"
+                    id="timesviewed"
+                    placeholder="Times viewed"
                     onChange={handleChange}/>
                 </div>
                 <button 

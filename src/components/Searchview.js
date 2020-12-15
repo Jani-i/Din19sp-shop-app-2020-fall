@@ -37,7 +37,7 @@ export default function Searchview(props) {
             return(item.name.toLowerCase().includes(search.toLowerCase),
             item.imgURL.includes(search),
             item.danger,
-            item.animal.includes(search))
+            item.animal,
             item.animalURL.includes(search))
         }
          
@@ -52,8 +52,6 @@ export default function Searchview(props) {
                 <input type="text" className={styles.searchbar} placeholder="search" onChange={ e => setSearch(e.target.value)}></input>
             </div>
             <div className={styles.supercontainer}>
-            
-            <Link to={'/animals'} className={styles.link}>See all</Link>
                 {filteredItems.map(item => (
                 <>
                 <Link to={'/products'} className={styles.link}>See all</Link>

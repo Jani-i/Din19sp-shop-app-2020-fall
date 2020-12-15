@@ -70,7 +70,7 @@ export default function AddItems(props) {
         document.getElementById("Mdescription").value = itemInfo.item[0].description;
         document.getElementById("Mtags").value = itemInfo.item[0].tags;
         document.getElementById("MimgURL").value = itemInfo.item[0].imgURL;
-        document.getElementById("Mtimesbought").value = itemInfo.item[0].timesbought;
+        document.getElementById("Mtimesviewed").value = itemInfo.item[0].timesviewed;
         document.getElementById("MID").value = itemInfo.item[0].id;
         }
 
@@ -83,7 +83,7 @@ export default function AddItems(props) {
                 "animalURL":state.animalURL,
                 "danger":state.danger,
                 "imgURL":state.imgURL,
-                "timesbought":state.timesbought,
+                "timesviewed":state.timesviewed,
                 "description":state.description,
                 "tags":state.tags,
             }
@@ -166,11 +166,11 @@ export default function AddItems(props) {
                     onChange={handleChange}/>
                 </div>
                 <div className={ styles.formItem }>
-                    <label className={ styles.formLabel }>Times bought (ALWAYS SET TO 0):</label><br/>
+                    <label className={ styles.formLabel }>Times viewed (ALWAYS SET TO 0):</label><br/>
                     <input type="number"
                     className={ styles.inputBox }
-                    id="Mtimesbought"
-                    placeholder="Times bought"
+                    id="Mtimesviewed"
+                    placeholder="Times viewed"
                     onChange={handleChange}/>
                 </div>
                 <button 

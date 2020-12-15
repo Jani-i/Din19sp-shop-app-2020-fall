@@ -75,7 +75,7 @@
     margin-right: 5%;
     padding-right: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 20px;
     padding-bottom: 20px;
     align-items: center;
@@ -86,26 +86,7 @@
     font-weight: 500;
 }
 
-.cartButton{
-    display: flex;
-    text-decoration: none;
-    color: black;
-    justify-items: flex-end;
-    padding: 10px;
-    border: 2px solid black;
-    font-weight: 500;
-    transition: border-radius 0.5s, background-color 0.5s, color 0.5s;
-}
 
-.cartButton:hover{
-    border-radius: 10px;
-    background-color: rgba(42, 52, 199, 0.5);
-    color: white;
-}
-
-.cartButton:active{
-    background-color: rgba(26, 33, 129, 0.9);
-}
 
 .featuredItems{
     display: flex;
