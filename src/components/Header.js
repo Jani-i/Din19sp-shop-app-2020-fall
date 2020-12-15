@@ -17,13 +17,12 @@ export default function Header(props) {
                     </Link>
                 </div>
 
-                <div className={ styles.searchContainer }>
-                
-                </div>
+                <div className={ styles.searchContainer }></div>
 
                 <div className={ styles.loginContainer }>
+                    <Login />
                 </div>
-            </div>
+        </div>
             <Searchview />
         </div>
     )
