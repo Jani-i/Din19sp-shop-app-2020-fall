@@ -5,7 +5,7 @@ import Home from './routes/Home';
 import Admin from './routes/Admin';
 import Item from './routes/Item';
 import Footer from './components/Footer';
-import Products from './routes/Products';
+import Animals from './routes/Animals';
 import styles from './App.module.css'
 
 function App(props) {
@@ -18,8 +18,8 @@ function App(props) {
             <Switch>
               <Route path="/" exact component={ Home } />
               <Route path="/admin" exact component={ Admin } />
-              <Route path="/products/:productURL" exact component={ Item } />
-              <Route path="/products" exact component={ Products } />
+              <Route path="/animals/:animalURL" exact component={ Item } />
+              <Route path="/animals" exact component={ Animals } />
             </Switch>
           <Footer />
         </Router>    

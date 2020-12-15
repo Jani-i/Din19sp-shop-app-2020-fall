@@ -6,6 +6,7 @@ import styles from './AddItems.module.css'
 export default function AddItems(props) {
 
     const [state, setState] = useState({
+        id : "",
         name : "",
         animalURL : "",
         description : "",
@@ -22,8 +23,19 @@ export default function AddItems(props) {
         }))
     }
 
-    const handleSubmitClick = (e) => {
+    const setNewInfo = () =>{
+        state.id = document.getElementById("MID").value;
+        state.name = document.getElementById("Mname").value;
+        state.animalURL = document.getElementById("ManimalURL").value;
+        state.description = document.getElementById("Mdescription").value;
+        state.tags = document.getElementById("Mtags").value;
+        state.danger = document.getElementById("Mdanger").value;
+        state.imgURL = document.getElementById("MimgURL").value;
+    }
+
+    const handleModifyClick = (e) => {
         e.preventDefault();
+            setNewInfo()
             sendDetailsToServer()
         }
     
@@ -37,10 +49,36 @@ export default function AddItems(props) {
         }))
     }
 
+    const [itemInfo, setItems] = useState([]);
+
+    const fetchItemInfo = async () => {
+        const data = await fetch(
+            'http://localhost:4000/fetchItemModify', {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: document.getElementById("Mname").value
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+        const itemInfo = await data.json();
+        setItems(itemInfo.item);
+        console.log(itemInfo.item[0])
+        document.getElementById("ManimalURL").value = itemInfo.item[0].animalURL;
+        document.getElementById("Mdanger").value = itemInfo.item[0].danger;
+        document.getElementById("Mdescription").value = itemInfo.item[0].description;
+        document.getElementById("Mtags").value = itemInfo.item[0].tags;
+        document.getElementById("MimgURL").value = itemInfo.item[0].imgURL;
+        document.getElementById("Mtimesbought").value = itemInfo.item[0].timesbought;
+        document.getElementById("MID").value = itemInfo.item[0].id;
+        }
+
     const sendDetailsToServer = () => {
             props.showError(null);
             props.showSuccess(null);
             const payload={
+                "id":state.id,
                 "name":state.name,
                 "animalURL":state.animalURL,
                 "danger":state.danger,
@@ -49,17 +87,18 @@ export default function AddItems(props) {
                 "description":state.description,
                 "tags":state.tags,
             }
-            Axios.post('http://localhost:4000/addNewItem', payload)
+            console.log(payload)
+            Axios.post('http://localhost:4000/modifyItem', payload)
                 .then(function (response) {
                     if(response.data === "OK"){
                             setState(prevState => ({
                                 ...prevState,
-                                'successMessage' : 'Item successfully added to DB'
+                                'successMessage' : 'Item successfully modified'
                             }))
                             props.showError(null)
-                            props.showSuccess("Item registered successfully!")
-                    } else if(response.data === "Animal name taken"){
-                        props.showError("Animal name already in use")
+                            props.showSuccess("Item modified successfully!")
+                    } else if(response.data === "Animal name doesn't exist"){
+                        props.showError("Animal name doesn't exist")
                         props.showSuccess(null)
                     } else {
                         console.log(response.data)
@@ -76,41 +115,44 @@ export default function AddItems(props) {
     return (
         <div>
             
-            <h1>ADD ITEMS</h1>
+            <h1>MODIFY ITEMS</h1>
                 <div className={ styles.formItem }>
                     <label className={ styles.formLabel }>Animal name:</label><br/>
                     <input type="text"
                     className={ styles.inputBox }
-                    id="name"
+                    id="Mname"
                     placeholder="Animal name"
                     onChange={handleChange}/>
+                    <button type="button" onClick={fetchItemInfo }>Fetch Item from DB</button>
+                    Animal ID = 
+                    <textarea id="MID" cols="5" rows="1"/>
                 </div>
                 <div className={ styles.formItem }>
                     <label className={ styles.formLabel }>Animal URL</label><br/>
                     <input type="text"
                     className={ styles.inputBox }
-                    id="animalURL"
+                    id="ManimalURL"
                     onChange={handleChange}/>
                     <button type="button" onClick={generateURL}>Generate URL</button>
                 </div>
                 <div className={ styles.formItem }>
-                    <label className={ styles.formLabel }>danger:</label><br/>
+                    <label className={ styles.formLabel }>Danger Rating:</label><br/>
                     <input type="number"
                     className={ styles.inputBox }
-                    id="danger"
-                    placeholder="danger"
+                    id="Mdanger"
+                    placeholder="Danger"
                     onChange={handleChange}/>
                 </div>
                 <div className={ styles.formItem }>
                     <label className={ styles.formLabel }>Description:</label><br/>
-                    <textarea id="description"
+                    <textarea id="Mdescription"
                     placeholder="Type description here"
                     rows="8" cols="50" maxLength="2000"
                     onChange={handleChange}/>
                 </div>
                 <div className={ styles.formItem }>
                     <label className={ styles.formLabel }>Tags:</label><br/>
-                    <textarea id="tags"
+                    <textarea id="Mtags"
                     placeholder="Type tags here"
                     rows="1" cols="50" maxLength="240"
                     onChange={handleChange}/>
@@ -119,7 +161,7 @@ export default function AddItems(props) {
                     <label className={ styles.formLabel }>Image:</label><br/>
                     <input type="text"
                     className={ styles.inputBox }
-                    id="imgURL"
+                    id="MimgURL"
                     placeholder="Image URL"
                     onChange={handleChange}/>
                 </div>
@@ -127,14 +169,14 @@ export default function AddItems(props) {
                     <label className={ styles.formLabel }>Times bought (ALWAYS SET TO 0):</label><br/>
                     <input type="number"
                     className={ styles.inputBox }
-                    id="timesbought"
+                    id="Mtimesbought"
                     placeholder="Times bought"
                     onChange={handleChange}/>
                 </div>
                 <button 
                 type="submit" 
-                onClick={handleSubmitClick}>
-                    ADD
+                onClick={handleModifyClick}>
+                    MODIFY
                 </button>
             
         </div>

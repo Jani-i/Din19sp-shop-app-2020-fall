@@ -1,8 +1,8 @@
 import React, {useState, useEffect, Component} from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import styles from './Products.module.css'
+import styles from './Animals.module.css'
 
-export default function Products(props) {
+export default function Animals(props) {
 
     useEffect(() => {
         fetchFilteredItems();
@@ -15,7 +15,7 @@ export default function Products(props) {
             'http://localhost:4000/fetchFilteredItems', {
                 method: 'POST',
                 body: JSON.stringify({
-                    productURL: props.match.params.productURL
+                    animalURL: props.match.params.animalURL
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8'
@@ -38,9 +38,9 @@ export default function Products(props) {
                                 <img src={item.imgURL} alt="Error: no image found"></img>
                             </div>
                             <div className={ styles.bottomInfo }>                        
-                                <div className={ styles.price }>Price: { item.price }€</div>
-                                <div onClick={window.location = `localhost:3000/products/${item.productURL}`}>
-                                <Link className={ styles.link } to={`/products/${item.productURL}`} >
+                                <div className={ styles.danger }>danger: { item.danger }</div>
+                                <div onClick={window.location = `localhost:3000/animals/${item.animalURL}`}>
+                                <Link className={ styles.link } to={`/animals/${item.animalURL}`} >
                                     Buy
                                 </Link>
                                 </div>
