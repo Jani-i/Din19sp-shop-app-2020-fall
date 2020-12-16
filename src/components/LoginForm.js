@@ -21,7 +21,7 @@ export default function LoginForm(props) {
     function processLoginClick(history){
         console.log('click')
 
-        Axios.post('https://krhumaja-api.herokuapp.com:5432/user/login',
+        Axios.post('http://localhost:4000/user/login',
                     {},
                      { auth: {
                          username: state.username,

@@ -14,7 +14,7 @@ function Item(props) {
 
     const fetchItemInfo = async () => {
         const data = await fetch(
-            'https://krhumaja-api.herokuapp.com:5432/fetchItemInfo', {
+            'http://localhost:4000/fetchItemInfo', {
                 method: 'POST',
                 body: JSON.stringify({
                     animalURL: props.match.params.animalURL
