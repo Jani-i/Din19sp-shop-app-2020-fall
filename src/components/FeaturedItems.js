@@ -12,7 +12,7 @@ export default function FeaturedItems() {
 
     const fetchFeaturedItems = async () => {
         const data = await fetch(
-            'https://krhumaja-api.herokuapp.com/fetchFeatured'
+            'https://krhumaja-api.herokuapp.com:5432/fetchFeatured'
         );
 
         const featuredItems = await data.json();

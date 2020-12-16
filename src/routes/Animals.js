@@ -12,7 +12,7 @@ export default function Animals(props) {
 
     const fetchFilteredItems = async () => {
         const data = await fetch(
-            'https://krhumaja-api.herokuapp.com/fetchItems'
+            'https://krhumaja-api.herokuapp.com:5432/fetchItems'
         )
         const filteredItems = await data.json();
         setItems(filteredItems.items);
