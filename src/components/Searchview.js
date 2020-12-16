@@ -14,7 +14,7 @@ export default function Searchview(props) {
 
     const fetchAllItems = async () => {
         const data = await fetch(
-            'http://localhost:4000/fetchItems'
+            'https://krhumaja-api.herokuapp.com/fetchItems'
         );
 
         const allItems = await data.json();

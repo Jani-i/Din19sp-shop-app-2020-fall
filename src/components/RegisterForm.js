@@ -38,7 +38,7 @@ export default function RegisterForm(props) {
                 "username":state.username,
                 "password":state.password,
             }
-            Axios.post('http://localhost:4000/user/register', payload)
+            Axios.post('https://krhumaja-api.herokuapp.com/user/register', payload)
                 .then(function (response) {
                     if(response.data === "OK"){
                             setState(prevState => ({

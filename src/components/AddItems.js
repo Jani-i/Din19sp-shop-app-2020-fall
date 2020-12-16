@@ -49,7 +49,7 @@ export default function AddItems(props) {
                 "description":state.description,
                 "tags":state.tags,
             }
-            Axios.post('http://localhost:4000/addNewItem', payload)
+            Axios.post('https://krhumaja-api.herokuapp.com/addNewItem', payload)
                 .then(function (response) {
                     if(response.data === "OK"){
                             setState(prevState => ({

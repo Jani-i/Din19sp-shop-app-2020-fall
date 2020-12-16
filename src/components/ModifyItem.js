@@ -53,7 +53,7 @@ export default function AddItems(props) {
 
     const fetchItemInfo = async () => {
         const data = await fetch(
-            'http://localhost:4000/fetchItemModify', {
+            'https://krhumaja-api.herokuapp.com/fetchItemModify', {
                 method: 'POST',
                 body: JSON.stringify({
                     name: document.getElementById("Mname").value
@@ -88,7 +88,7 @@ export default function AddItems(props) {
                 "tags":state.tags,
             }
             console.log(payload)
-            Axios.post('http://localhost:4000/modifyItem', payload)
+            Axios.post('https://krhumaja-api.herokuapp.com/modifyItem', payload)
                 .then(function (response) {
                     if(response.data === "OK"){
                             setState(prevState => ({
