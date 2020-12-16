@@ -48,7 +48,7 @@ export default function Searchview(props) {
     console.log(search)
     return (
         <div>
-            <div>
+            <div className={styles.blue}>
                 <input type="text" className={styles.searchbar} placeholder="search" onChange={ e => setSearch(e.target.value)}></input>
             </div>
             <div className={styles.supercontainer}>
@@ -62,10 +62,10 @@ export default function Searchview(props) {
                                 <img src={item.imgURL} alt="Error: no image found"></img>
                             </div>
                             <div className={ styles.bottomInfo }>                        
-                                <div className={ styles.danger }>danger: { item.danger }</div>
+                                <div className={ styles.danger }>DP: { item.danger }</div>
                                 <div onClick={window.location = `localhost:3000/animals/${item.animalURL}`}>
                                 <Link className={ styles.link } to={`/animals/${item.animalURL}`} >
-                                    Buy
+                                    View
                                 </Link>
                                 </div>
                             </div>

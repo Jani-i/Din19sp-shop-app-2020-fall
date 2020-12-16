@@ -20,7 +20,9 @@ export default function Animals(props) {
     console.log(filteredItems)
     return (
         <div>
+            <div className={ styles.backgroundImage } />
             <div>
+                <h1 className={ styles.title }>Animals currently rated: (click name to view)</h1>
                 {filteredItems.map(item => (
                 <>
                 <div className={ styles.container } >

@@ -21,7 +21,7 @@ export default function FeaturedItems() {
     };
 
     return (
-            <div className={ styles.supercontainer }><h1 className={ styles.featuredTitle }>Featured Items</h1>
+            <div className={ styles.supercontainer }><h1 className={ styles.featuredTitle }>Popular Animals</h1>
             <div className={ styles.backgroundImage }>
             </div>
                 <div className={ styles.container }>
@@ -38,7 +38,7 @@ export default function FeaturedItems() {
                                     <div className={ styles.danger }>DP: { item.danger }</div>
                                     <div className={ styles.link } onClick={window.location = `localhost:3000/animals/${item.animalURL}`}>
                                     <Link className={ styles.nolinkdeco } to={`/animals/${item.animalURL}`} >
-                                        Buy
+                                        View
                                     </Link>
                                     </div>
                                 </div>

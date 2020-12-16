@@ -45,6 +45,14 @@
     color:white;
     right: 40px;
     font-size: 25px;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+.login:hover{
+    background-color: rgb(30, 30, 172);
 }
 
 .register{
